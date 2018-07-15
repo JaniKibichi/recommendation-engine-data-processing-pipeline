@@ -34,5 +34,24 @@ $ sudo docker run -d -p 27017:27017 -v ~/data:/data/db mongo
 $ sudo apt-get install mongodb-clients
 $ mongo localhost/recommenddb
 ````
+- Configure casbah by adding it to build.sbt
+````
+libraryDependencies += "org.mongodb" %% "casbah" % "3.1.1"
+````
+- For Kafka, we also need to run Zookeeper
+````
+$ wget -c http://www-us.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz
+$ tar xzf kafka_2.11-1.1.0.tgz
+
+#First Start Zookeeper
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+#Start kafka server in a separate terminal
+$ bin/kafka-server-start.sh config/server.properties
+````
+- Add the Kafka dependencies to build.sbt
+````
+libraryDependencies += "org.apache.kafka" %% "kafka" % "1.1.0"
+````
 
 
