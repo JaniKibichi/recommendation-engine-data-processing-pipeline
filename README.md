@@ -53,5 +53,13 @@ $ bin/kafka-server-start.sh config/server.properties
 ````
 libraryDependencies += "org.apache.kafka" %% "kafka" % "1.1.0"
 ````
-
+##### Branch out to explore the Data Processing Pipeline with:
+ - Akka
+ - MongoDB
+ - Apache Kafka
+ - Apache Spark
+````
+$ git checkout -b final_data_processing_pipeline mongo_kafka_setup
+````
+ 
 
