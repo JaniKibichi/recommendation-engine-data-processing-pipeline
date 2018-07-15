@@ -19,4 +19,10 @@ Data is changed to a common and consistent format.
 
 3. Load<br>
 The common and consistently formatted data is put in a data store.
+<br>
+##### Branch out to set up MongoDB and Kafka using Docker
+````
+$ git checkout -b mongo_kafka_setup extract_transform_load
+````
+
 
