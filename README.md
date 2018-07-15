@@ -24,5 +24,15 @@ The common and consistently formatted data is put in a data store.
 ````
 $ git checkout -b mongo_kafka_setup extract_transform_load
 ````
+- Create a volume to hold data (optional)
+````
+$ mkdir ~/data
+$ sudo docker run -d -p 27017:27017 -v ~/data:/data/db mongo
+````
+- Use the MongoDB client to connect to the container
+````
+$ sudo apt-get install mongodb-clients
+$ mongo localhost/recommenddb
+````
 
 
